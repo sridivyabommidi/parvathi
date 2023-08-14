@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paravathi Catering</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<link href="css/plugin.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="fonts/line-icons.css" type="text/css">
+  <link rel="stylesheet" href="fontawesome/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="fonts-rx/remixicon.css" type="text/css">
+<script src="https://kit.fontawesome.com/4eaa39f807.js" crossorigin="anonymous"></script>
+<style>
+  @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+margin:0;
+}
+
+h1 {
+font-family: 'Lato', sans-serif;
+font-weight:300;
+letter-spacing: 2px;
+font-size:48px;
+}
+p {
+font-family: 'Lato', sans-serif;
+letter-spacing: 1px;
+font-size:14px;
+color: #333333;
+}
+
+.header {
+position:relative;
+text-align:center;
+background-image: url(https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg);
+background-size:cover;
+color:white;
+}
+.logo {
+width:50px;
+fill:white;
+padding-right:15px;
+display:inline-block;
+vertical-align: middle;
+}
+
+.inner-header {
+height:50vh;
+width:100%;
+margin: 0;
+padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.waves {
+position:relative;
+width: 100%;
+height:15vh;
+margin-bottom:-7px; /*Fix for safari gap*/
+min-height:100px;
+max-height:150px;
+}
+
+.content {
+position:relative;
+height:20vh;
+text-align:center;
+background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+animation-delay: -2s;
+animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+animation-delay: -3s;
+animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+animation-delay: -4s;
+animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+animation-delay: -5s;
+animation-duration: 20s;
+}
+@keyframes move-forever {
+0% {
+ transform: translate3d(-90px,0,0);
+}
+100% { 
+  transform: translate3d(85px,0,0);
+}
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+.waves {
+  height:40px;
+  min-height:40px;
+}
+.content {
+  height:30vh;
+}
+h1 {
+  font-size:24px;
+}
+}
+</style>
+</head>
+<body style="background-image:url(images/bg/team-bg1.png);">
+
+ 
+  <header class="main_header_area">
+
+    <div class="header_menu">
+    <nav class="navbar navbar-default">
+    <div class="container">
+    <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-2 pt-2">
+    
+    <div class="navbar-header">
+    <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="image" style="height: 250px;margin-top: -70px;margin-bottom: -70px; margin-left:-20%">
+    </a>
+    </div>
+    
+    <div class="navbar-collapse1 d-lg-flex align-items-center" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav" id="responsive-menu">
+    <li><a href="index.html"style = "font-family:'Inter', sans-serif; font-weight:bold;  " class = "  navline">Home</a> </li>
+    <li><a href="about.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline" >About </a></li>
+    <li><a href="services.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline">Services</a> </li>
+    <li><a href="menu.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline" >Menu</a></li>
+    <li><a href="gallery.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline">Gallery</a> </li>
+    
+    <li><a href="testimonials.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline">Testimonials </a></li>
+    <li><a href="contact.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline active">Contact </a></li>
+    </ul>
+    
+    </div>
+    <div id="slicknav-mobile"></div>
+    </div>
+    </div>
+    </nav>
+    </div>
+    
+    </header>
+
+  <div class=" breadcrumb-main" style="background-image: url(https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg);">
+
+    <!--Content before waves-->
+    <div class="inner-header flex">
+    <!--Just the logo.. Don't mind this-->
+    <div class="breadcrumb-outer pt-8">
+      <div class="container">
+      <div class="breadcrumb-content text-center">
+      <h2 class="mb-0 d-inline" style = "color:white">Contact</h2>
+      <nav aria-label="breadcrumb" class="mt-2">
+      <ul class="breadcrumb">
+      <li class="breadcrumb-item "><a href="index.html" style = "color:white;" >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ul>
+      
+      </nav>
+      </div>
+      </div>
+      </div>
+      <div class="overlay"></div>
+  
+    </div>
+    
+    <!--Waves Container-->
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+    <!--Waves end-->
+    
+    </div>
+
+
+<section class="contact-main" style = "background-color:#FFFEFA">
+<div class="container">
+<div class="contact-info">
+<div class="row d-flex align-items-center">
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+<div class="info-item mb-4 bg-white text-center">
+<div class="info-icon">
+<i class="fa fa-home"></i>
+</div>
+<div class="info-content mt-2">
+<p class="m-0" style="color: #000; font-size: 17px;">146, Siruvani Main Road, Perur - Coimbatore, TamilNadu 641010.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+<div class="info-item mb-4 bg-white text-center">
+<div class="info-icon">
+<i class="fa fa-phone"></i>
+</div>
+<div class="info-content mt-2">
+<p class="m-0" style="color: #000; font-size: 16px;"><a href = "tel:919894060566">(91)- 9894060566</a></p>
+<p class="m-0" style="color: #000; font-size: 16px;"><a href = "tel:919894060566">(91)- 9443760566</a></p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+<div class="info-item mb-4 bg-white text-center">
+<div class="info-icon">
+<i class="fa fa-envelope"></i>
+</div>
+<div class="info-content mt-2">
+<p class="m-0" ><a href="mailto:info@parvathicaterings.com" class="__cf_email__" data-cfemail="5038353c2010142522323122393e3e7e333f3d" style="color: #000; font-size: 16px;">info@parvathicaterings.com</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="contact-map">
+<div class="row d-flex align-items-center">
+<div class="col-lg-5 col-md-6 col-sm-12">
+<div class="map-main">
+  
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125344.73983899545!2d76.77164469726563!3d10.961625999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85bfbfd3eb513%3A0x2075d411de461a6c!2sparvathi%20caterings!5e0!3m2!1sen!2sin!4v1691643913264!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<div class="social-links mt-2">
+<ul>
+<li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-7 col-md-6 col-sm-12">
+<div id="contact-form1" class="contact-form p-0 transparent" style = "margin-top:-50px">
+<h3 class="" style = "color:black">Keep in Touch</h3>
+<div id="contactform-error-msg"></div>
+<form method="post" action="#" name="contactform" id="contactform">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<input type="text" name="first_name" class="form-control" id="fname" placeholder="First Name" >
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<input type="text" name="last_name" class="form-control" id="lname" placeholder="Last Name">
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<input type="email" name="email" class="form-control" id="email" placeholder="Email" >
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<input type="text" name="phone" class="form-control" id="phnumber" placeholder="Phone" >
+</div>
+</div>
+<div class="col-lg-12">
+<div class="textarea">
+<textarea name="comments" placeholder="Enter a message" ></textarea>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="comment-btn mt-2">
+<input type="submit" class="nir-btn" id="submit" value="Send Message">
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section class="insta-main p-0">
+  <div class="insta-inner">
+  <div class="follow-button">
+  <h5 class="m-0"><a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D" title="">Follow on Instagram</a></h5>
+  </div>
+  <div class="row attract-slider">
+  <div class="col-md-3 col-sm-6 col-xs-12">
+  <div class="insta-image">
+  <a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691388042/WhatsApp_Image_2023-08-07_at_8.44.31_AM_omuuqy.jpg" alt="insta" style = "height:180px"></a>
+  </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+  <div class="insta-image">
+  <a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691388042/WhatsApp_Image_2023-08-07_at_8.44.31_AM_1_n4izin.jpg" alt="insta" style = "height:180px" ></a>
+  </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+  <div class="insta-image">
+  <a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691388042/WhatsApp_Image_2023-08-07_at_8.44.31_AM_2_emziur.jpg" alt="insta" style = "height:180px"></a>
+  </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+  <div class="insta-image">
+  <a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691388042/WhatsApp_Image_2023-08-07_at_8.44.34_AM_mkqy2y.jpg" alt="insta" style = "height:180px"></a>
+  </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+  <div class="insta-image">
+  <a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691388042/WhatsApp_Image_2023-08-07_at_8.44.33_AM_coacna.jpg" alt="insta" style = "height:180px"></a>
+  </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+  <div class="insta-image">
+  <a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691388042/WhatsApp_Image_2023-08-07_at_8.44.32_AM_1_zsecdg.jpg" alt="insta" style = "height:180px"></a>
+  </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+  <div class="insta-image">
+  <a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691388041/WhatsApp_Image_2023-08-07_at_8.44.33_AM_1_xipabo.jpg" alt="insta" style = "height:180px"></a>
+  </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+  <div class="insta-image">
+  <a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691388042/WhatsApp_Image_2023-08-07_at_8.44.32_AM_mnoe70.jpg" alt="insta" style = "height:180px"></a>
+  </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+  <div class="insta-image">
+  <a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691388042/WhatsApp_Image_2023-08-07_at_8.44.32_AM_2_xs0l2h.jpg" alt="insta" style = "height:180px"></a>
+   </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+ 
+  <footer style="background-image:url(images/bg/team-bg.png);" class="pt-10 bubbles">
+    <div class="footer-upper pb-4">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
+    
+    <img src="images/logo.png" alt="" style = "width:50%; margin-left:-25px; margin-top:-40px;">
+    <p class = "mb-4">At Parvathi Caterings, we believe that every event is an opportunity to create unforgettable memories through exquisite cuisine. </p>
+    <h4 class="white">Opening Hours</h4>
+    <ul class = "mb-4">
+      <li class="d-flex align-items-center justify-content-between"><div class="day">MONDAY-SUNDAY<br/>(9:00 AM - 10:00 PM ) </li>
+     
+      </ul>
+    
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+    <div class="footer-links">
+    <h4 class="white">Quick Links</h4>
+    <ul>
+    
+    <li><a href="about.html">About </li>
+      <li><a href="servicess.html">Services</li>
+        <li><a href="gallery.html">Gallery</a></li> 
+    <li><a href="menu.html">Menu</a></li>
+    
+    
+    <li><a href="testimonials.html">Testimonials </li>
+    <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+    <div class="footer-links">
+    <h4 class="white">Contact</h4>
+    <p class="m-0" style=" font-size: 17px;">146, Siruvani Main Road, <br/>Perur - Coimbatore, TamilNadu 641010.</p>
+    <p class="mt-4" style=" font-size: 16px;">(91)- 98940 60566</p>
+    <p class="m-0" style=" font-size: 16px;">(91)- 94437 60566</p>
+    <p class="mt-4" ><a href="info@parvathicaterings.com" class="__cf_email__" data-cfemail="5038353c2010142522323122393e3e7e333f3d" style="font-size: 16px;">info@parvathicaterings.com</a></p>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+    <div class="footer-links">
+    <h4 class="white">Newsletter</h4>
+    <p>Ready to turn your event into a gastronomic journey? Get in touch with us today to discuss your culinary aspirations. Whether it's an intimate gathering or a grand affair, Parvathi Caterings is here to transform your vision into reality.</p>
+    <div class="newsletter-form">
+    <form>
+    <input type="email" placeholder="Enter your email">
+    <input type="submit" class="nir-btn mt-2 w-100" value="Send">
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="footer-copyright">
+    <div class="container">
+    <div class="copyright-inner d-md-flex align-items-center justify-content-between">
+    <div class="copyright-text">
+    <p class="m-0 white">2023 @ Parvathy Caterings. Designed By <a href = "https://olivegrapes.in/" target = "__blank">Olivegrapes.</a></p>
+    </div>
+    <div class="social-links">
+    <ul>
+    <li><a href="https://www.facebook.com/parvathicaterings?mibextid=ZbWKwL"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+    <li><a href="whatsapp://send?phone=[9894060566]" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+    <li><a href="tel:91+ 98940 60566/91+ 94437 60566"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="mid-overlay"></div>
+    </footer>
+
+<div id="back-to-top">
+<a href="#"></a>
+</div>
+
+
+<div id="search1">
+<button type="button" class="close">×</button>
+<form>
+<input type="search" value="" placeholder="type keyword(s) here" />
+<button type="submit" class="btn btn-primary">Search</button>
+</form>
+</div>
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/particlerun.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom-swiper.js"></script>
+<script src="js/custom-nav.js"></script>
+<script src="js/custom-date.js"></script>
+<script>(function(){var js = "window['__CF$cv$params']={r:'72c906cd4a3285ae',m:'eiacfPv1VTbubb6IBoTiqlzIuMbCbDz4cA04aeevOs8-1658124336-0-AZPgEA7NbjIOMtqtSERWuEyUIRyE/DPm/2BJBitT739M/vq2pX20QjEIAH1q3horQox3ennmlT3R5tiGWJ3dm9lW36aXNBGNyJnD4KhhJhvFEj7GKZ3jKcm/rnWoxeIrc2TN6rvlfKqsDIiBtPYC4kE=',s:[0x094ff0f135,0x8bcfa83ab4],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible5615.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+<!-- Mirrored from htmldesigntemplates.com/html/durbarinn/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jul 2022 06:06:57 GMT -->
+</html>

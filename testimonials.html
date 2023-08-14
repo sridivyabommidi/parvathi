@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paravathi Catering</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<link href="css/plugin.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="fonts/line-icons.css" type="text/css">
+  <link rel="stylesheet" href="fontawesome/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="fonts-rx/remixicon.css" type="text/css">
+<script src="https://kit.fontawesome.com/4eaa39f807.js" crossorigin="anonymous"></script>
+<style>
+  @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+margin:0;
+}
+
+h1 {
+font-family: 'Lato', sans-serif;
+font-weight:300;
+letter-spacing: 2px;
+font-size:48px;
+}
+p {
+font-family: 'Lato', sans-serif;
+letter-spacing: 1px;
+font-size:14px;
+color: #333333;
+}
+
+.header {
+position:relative;
+text-align:center;
+background-image: url(https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg);
+background-size:cover;
+color:white;
+}
+.logo {
+width:50px;
+fill:white;
+padding-right:15px;
+display:inline-block;
+vertical-align: middle;
+}
+
+.inner-header {
+height:50vh;
+width:100%;
+margin: 0;
+padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.waves {
+position:relative;
+width: 100%;
+height:15vh;
+margin-bottom:-7px; /*Fix for safari gap*/
+min-height:100px;
+max-height:150px;
+}
+
+.content {
+position:relative;
+height:20vh;
+text-align:center;
+background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+animation-delay: -2s;
+animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+animation-delay: -3s;
+animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+animation-delay: -4s;
+animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+animation-delay: -5s;
+animation-duration: 20s;
+}
+@keyframes move-forever {
+0% {
+ transform: translate3d(-90px,0,0);
+}
+100% { 
+  transform: translate3d(85px,0,0);
+}
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+.waves {
+  height:40px;
+  min-height:40px;
+}
+.content {
+  height:30vh;
+}
+h1 {
+  font-size:24px;
+}
+}
+</style>
+<style>
+
+  .slider {
+    width: 100%;
+  }
+  .slider input {
+    display: none;
+  }
+  .testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 400px;
+    perspective: 1000px;
+    overflow: hidden;
+  }
+  .testimonials .item {
+    width:400px;
+    
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #87361b;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.4s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    user-select: none;
+    cursor: pointer;
+  }
+  .testimonials .item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 13px solid #FFE17B;
+  }
+  .testimonials .item p {
+    color: #ffffff;
+  }
+  .testimonials .item h2 {
+    font-size: 14px;
+  }
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dots label {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #87361b;
+    margin: 7px;
+    transition-duration: 0.2s;
+  }
+  
+  #t-1:checked ~ .dots label[for="t-1"],
+  #t-2:checked ~ .dots label[for="t-2"],
+  #t-3:checked ~ .dots label[for="t-3"],
+  #t-4:checked ~ .dots label[for="t-4"],
+  #t-5:checked ~ .dots label[for="t-5"] {
+    transform: scale(2);
+    background-color: #252B48;
+  }
+  #t-1:checked ~ .dots label[for="t-2"],
+  #t-2:checked ~ .dots label[for="t-1"],
+  #t-2:checked ~ .dots label[for="t-3"],
+  #t-3:checked ~ .dots label[for="t-2"],
+  #t-3:checked ~ .dots label[for="t-4"],
+  #t-4:checked ~ .dots label[for="t-3"],
+  #t-4:checked ~ .dots label[for="t-5"],
+  #t-5:checked ~ .dots label[for="t-4"] {
+    transform: scale(1.5);
+  }
+  #t-1:checked ~ .testimonials label[for="t-5"] {
+    transform: translate3d(1200px, 0, -360px) rotateY(-45deg);
+  }
+  #t-1:checked ~ .testimonials label[for="t-4"],
+  #t-2:checked ~ .testimonials label[for="t-5"] {
+    transform: translate3d(900px, 0, -270px) rotateY(-35deg);
+    z-index: 1;
+  }
+  #t-1:checked ~ .testimonials label[for="t-3"],
+  #t-2:checked ~ .testimonials label[for="t-4"],
+  #t-3:checked ~ .testimonials label[for="t-5"] {
+    transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+    z-index: 2;
+  }
+  #t-1:checked ~ .testimonials label[for="t-2"],
+  #t-2:checked ~ .testimonials label[for="t-3"],
+  #t-3:checked ~ .testimonials label[for="t-4"],
+  #t-4:checked ~ .testimonials label[for="t-5"] {
+    transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+    z-index: 3;
+  }
+  #t-2:checked ~ .testimonials label[for="t-1"],
+  #t-3:checked ~ .testimonials label[for="t-2"],
+  #t-4:checked ~ .testimonials label[for="t-3"],
+  #t-5:checked ~ .testimonials label[for="t-4"] {
+    transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+    z-index: 3;
+  }
+  #t-3:checked ~ .testimonials label[for="t-1"],
+  #t-4:checked ~ .testimonials label[for="t-2"],
+  #t-5:checked ~ .testimonials label[for="t-3"] {
+    transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+  }
+  #t-5:checked ~ .testimonials label[for="t-2"],
+  #t-4:checked ~ .testimonials label[for="t-1"] {
+    transform: translate3d(-900px, 0, -270px) rotateY(35deg);
+  }
+  #t-5:checked ~ .testimonials label[for="t-1"] {
+    transform: translate3d(-1200px, 0, -360px) rotateY(45deg);
+  }
+  #t-1:checked ~ .testimonials label[for="t-1"],
+  #t-2:checked ~ .testimonials label[for="t-2"],
+  #t-3:checked ~ .testimonials label[for="t-3"],
+  #t-4:checked ~ .testimonials label[for="t-4"],
+  #t-5:checked ~ .testimonials label[for="t-4"],
+  #t-5:checked ~ .testimonials label[for="t-5"] {
+    z-index: 4;
+  }
+  
+  
+    </style>
+
+</head>
+<body style="background-image:url(images/bg/team-bg1.png);">
+
+   
+  <header class="main_header_area">
+
+    <div class="header_menu">
+    <nav class="navbar navbar-default">
+    <div class="container">
+    <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-2 pt-2">
+    
+    <div class="navbar-header">
+    <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="image" style="height: 250px;margin-top: -70px;margin-bottom: -70px; margin-left:-20%">
+    </a>
+    </div>
+    
+    <div class="navbar-collapse1 d-lg-flex align-items-center" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav" id="responsive-menu">
+    <li><a href="index.html"style = "font-family:'Inter', sans-serif; font-weight:bold;  " class = "  navline">Home</a> </li>
+    <li><a href="about.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline" >About </a></li>
+    <li><a href="services.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline">Services</a> </li>
+    <li><a href="menu.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline" >Menu</a></li>
+    <li><a href="gallery.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline">Gallery</a> </li>
+    
+    <li><a href="testimonials.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline active">Testimonials </a></li>
+    <li><a href="contact.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline">Contact </a></li>
+    </ul>
+    
+    </div>
+    <div id="slicknav-mobile"></div>
+    </div>
+    </div>
+    </nav>
+    </div>
+    
+    </header>
+
+
+
+
+  <div class=" breadcrumb-main" style="background-image: url(https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg);">
+
+    <!--Content before waves-->
+    <div class="inner-header flex">
+    <!--Just the logo.. Don't mind this-->
+    <div class="breadcrumb-outer pt-8">
+      <div class="container">
+      <div class="breadcrumb-content text-center">
+      <h2 class="mb-0 d-inline" style = "color:white">Testimonials</h2>
+      <nav aria-label="breadcrumb" class="mt-2">
+      <ul class="breadcrumb">
+      <li class="breadcrumb-item "><a href="index.html" style = "color:white;" >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Testimonials</li>
+      </ul>
+      
+      </nav>
+      </div>
+      </div>
+      </div>
+      <div class="overlay"></div>
+  
+    </div>
+    
+    <!--Waves Container-->
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+    <!--Waves end-->
+    
+    </div>
+
+<section style = "background-color:#FFFEFA;">
+  <div class="slider" style = "padding-top:10%;">
+		<input type="radio" name="testimonial" id="t-1">
+		<input type="radio" name="testimonial" id="t-2">
+		<input type="radio" name="testimonial" id="t-3" checked>
+		<input type="radio" name="testimonial" id="t-4">
+		<input type="radio" name="testimonial" id="t-5">
+		<div class="testimonials"  style = "margin-top:-100px">
+			<label class="item" for="t-1" style = "height:400px;">
+				<img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691754964/80948068-chef-with-knife-and-fork-sign-vector-white-icon-with-soft-shadow-on-transparent-background-removebg-preview_c9oubg.png" alt="picture">
+				<p>"I can't say enough good things about Parvathi Caterings. From the moment we contacted them to the last bite of dessert at our event, their team was professional, attentive, and exceeded all expectations. The food was exceptional, beautifully presented, and received rave reviews from all our guests. Thank you for making our special occasion truly memorable!"</p>
+				<h2 style = "color:white">- Rajeshwari</h2>
+			</label>
+			<label class="item" for="t-2" style = "height:400px;">
+				<img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691754964/80948068-chef-with-knife-and-fork-sign-vector-white-icon-with-soft-shadow-on-transparent-background-removebg-preview_c9oubg.png" alt="picture">
+				<p>"I recently hosted a corporate luncheon and decided to try Parvathi Caterings. I'm so glad I did! The entire experience, from planning to execution, was seamless. The menu options were impressive, catering to various dietary needs, and the food tasted exquisite. I received countless compliments from my colleagues, and I'm already planning to use them for our next event." </p>
+				<h2 style = "color:white">- Navaneethakrishnan Ramanathan</h2>
+			</label>
+			<label class="item" for="t-3" style = "height:400px;">
+				<img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691754964/80948068-chef-with-knife-and-fork-sign-vector-white-icon-with-soft-shadow-on-transparent-background-removebg-preview_c9oubg.png" alt="picture">
+				<p>"Parvathi Caterings is our go-to catering service for all our corporate events. They consistently deliver top-notch cuisine that impresses our clients and colleagues every time. Their attention to detail, flexibility with menu options, and seamless execution are what sets them apart. We highly recommend their services to anyone looking to elevate their event to the next level!"</p>
+				<h2 style = "color:white">- Nandini</h2>
+			</label>
+			<label class="item" for="t-4" style = "height:400px;">
+				<img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691754964/80948068-chef-with-knife-and-fork-sign-vector-white-icon-with-soft-shadow-on-transparent-background-removebg-preview_c9oubg.png" alt="picture">
+				<p>"We recently celebrated our wedding with Parvathi Caterings, and they made it an absolute dream come true. From the initial consultation to the final event, they were incredibly supportive and accommodating. The food was beyond delicious, and the presentation was simply stunning. Our guests were blown away, and we couldn't be happier with our decision to choose them. Thank you for making our big day so perfect!"</p>
+				<h2 style = "color:white">- Shirisha</h2>
+			</label>
+			<label class="item" for="t-5" style = "height:400px;">
+				<img src="https://res.cloudinary.com/docfwdpgq/image/upload/v1691754964/80948068-chef-with-knife-and-fork-sign-vector-white-icon-with-soft-shadow-on-transparent-background-removebg-preview_c9oubg.png" alt="picture">
+				<p>"We recently used Parvathi Caterings for a family reunion, and we were absolutely blown away. The menu options were diverse and catered to all dietary preferences, and the food tasted like it was made with love and care. The team was incredibly organized, and everything ran smoothly throughout the event. Our guests couldn't stop complimenting the delicious food and impeccable service. We'll definitely be using their services again in the future!"</p>
+				<h2 style = "color:white">- Sudharshan</h2>
+			</label>
+		</div>
+		<div class="dots" style = "margin-top:80px">
+			<label for="t-1"></label>
+			<label for="t-2"></label>
+			<label for="t-3"></label>
+			<label for="t-4"></label>
+			<label for="t-5"></label>
+		</div>
+	</div>
+
+</section>
+
+
+
+
+
+<footer style="background-image:url(images/bg/team-bg.png);" class="pt-10 bubbles">
+  <div class="footer-upper pb-4">
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
+  
+  <img src="images/logo.png" alt="" style = "width:50%; margin-left:-25px; margin-top:-40px;">
+  <p class = "mb-4">At Parvathi Caterings, we believe that every event is an opportunity to create unforgettable memories through exquisite cuisine. </p>
+  <h4 class="white">Opening Hours</h4>
+  <ul class = "mb-4">
+    <li class="d-flex align-items-center justify-content-between"><div class="day">MONDAY-SUNDAY<br/>(9:00 AM - 10:00 PM ) </li>
+   
+    </ul>
+  
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+  <div class="footer-links">
+  <h4 class="white">Quick Links</h4>
+  <ul>
+  
+  <li><a href="about.html">About </li>
+    <li><a href="servicess.html">Services</li>
+      <li><a href="gallery.html">Gallery</a></li> 
+  <li><a href="menu.html">Menu</a></li>
+  
+  
+  <li><a href="testimonials.html">testimonials </li>
+  <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+  <div class="footer-links">
+  <h4 class="white">Contact</h4>
+  <p class="m-0" style=" font-size: 17px;">146, Siruvani Main Road, <br/>Perur - Coimbatore, TamilNadu 641010.</p>
+  <p class="mt-4" style=" font-size: 16px;">(91)- 98940 60566</p>
+  <p class="m-0" style=" font-size: 16px;">(91)- 94437 60566</p>
+  <p class="mt-4" ><a href="info@parvathicaterings.com" class="__cf_email__" data-cfemail="5038353c2010142522323122393e3e7e333f3d" style="font-size: 16px;">info@parvathicaterings.com</a></p>
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+  <div class="footer-links">
+  <h4 class="white">Newsletter</h4>
+  <p>Ready to turn your event into a gastronomic journey? Get in touch with us today to discuss your culinary aspirations. Whether it's an intimate gathering or a grand affair, Parvathi Caterings is here to transform your vision into reality.</p>
+  <div class="newsletter-form">
+  <form>
+  <input type="email" placeholder="Enter your email">
+  <input type="submit" class="nir-btn mt-2 w-100" value="Send">
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="footer-copyright">
+  <div class="container">
+  <div class="copyright-inner d-md-flex align-items-center justify-content-between">
+  <div class="copyright-text">
+  <p class="m-0 white">2023 @ Parvathy Caterings. Designed By <a href = "https://olivegrapes.in/" target = "__blank">Olivegrapes.</a></p>
+  </div>
+  <div class="social-links">
+  <ul>
+  <li><a href="https://www.facebook.com/parvathicaterings?mibextid=ZbWKwL"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+  <li><a href="whatsapp://send?phone=[9894060566]" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+  <li><a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+  <li><a href="tel:91+ 98940 60566/91+ 94437 60566"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="overlay"></div>
+  <div class="mid-overlay"></div>
+  </footer>
+
+
+<div id="back-to-top">
+<a href="#"></a>
+</div>
+
+
+<div id="search1">
+<button type="button" class="close">×</button>
+<form>
+<input type="search" value="" placeholder="type keyword(s) here" />
+<button type="submit" class="btn btn-primary">Search</button>
+</form>
+</div>
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/particlerun.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom-swiper.js"></script>
+<script src="js/custom-nav.js"></script>
+<script src="js/custom-date.js"></script>
+<script>(function(){var js = "window['__CF$cv$params']={r:'72c906cd4a3285ae',m:'eiacfPv1VTbubb6IBoTiqlzIuMbCbDz4cA04aeevOs8-1658124336-0-AZPgEA7NbjIOMtqtSERWuEyUIRyE/DPm/2BJBitT739M/vq2pX20QjEIAH1q3horQox3ennmlT3R5tiGWJ3dm9lW36aXNBGNyJnD4KhhJhvFEj7GKZ3jKcm/rnWoxeIrc2TN6rvlfKqsDIiBtPYC4kE=',s:[0x094ff0f135,0x8bcfa83ab4],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible5615.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+<!-- Mirrored from htmldesigntemplates.com/html/durbarinn/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jul 2022 06:06:57 GMT -->
+</html>

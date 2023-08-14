@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paravathi Catering</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<link href="css/plugin.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="fonts/line-icons.css" type="text/css">
+  <link rel="stylesheet" href="fontawesome/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="fonts-rx/remixicon.css" type="text/css">
+<script src="https://kit.fontawesome.com/4eaa39f807.js" crossorigin="anonymous"></script>
+<style>
+  @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+margin:0;
+}
+
+h1 {
+font-family: 'Lato', sans-serif;
+font-weight:300;
+letter-spacing: 2px;
+font-size:48px;
+}
+p {
+font-family: 'Lato', sans-serif;
+letter-spacing: 1px;
+font-size:14px;
+color: #333333;
+}
+
+.header {
+position:relative;
+text-align:center;
+background-image: url(https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg);
+background-size:cover;
+color:white;
+}
+.logo {
+width:50px;
+fill:white;
+padding-right:15px;
+display:inline-block;
+vertical-align: middle;
+}
+
+.inner-header {
+height:50vh;
+width:100%;
+margin: 0;
+padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.waves {
+position:relative;
+width: 100%;
+height:15vh;
+margin-bottom:-7px; /*Fix for safari gap*/
+min-height:100px;
+max-height:150px;
+}
+
+.content {
+position:relative;
+height:20vh;
+text-align:center;
+background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+animation-delay: -2s;
+animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+animation-delay: -3s;
+animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+animation-delay: -4s;
+animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+animation-delay: -5s;
+animation-duration: 20s;
+}
+@keyframes move-forever {
+0% {
+ transform: translate3d(-90px,0,0);
+}
+100% { 
+  transform: translate3d(85px,0,0);
+}
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+.waves {
+  height:40px;
+  min-height:40px;
+}
+.content {
+  height:30vh;
+}
+h1 {
+  font-size:24px;
+}
+
+}
+</style>
+<style>
+  *, *:before, *:after {
+box-sizing: border-box;
+}
+
+
+
+
+.card {
+margin-top: 5rem;
+display: grid;
+place-items: center;
+display: inline-block;
+position: relative;
+overflow: hidden;
+}
+
+.card:hover .card__reveal--left {
+transform: translateX(-100%);
+}
+
+.card:hover .card__reveal--up {
+transform: translateY(-100%);
+}
+
+.card:hover .card__reveal--right {
+transform: translateX(100%);
+}
+
+.card:hover .card__reveal--down {
+transform: translateY(100%);
+}
+
+.card h2 {
+padding: 7rem;
+margin: 0;
+}
+
+.card__content {
+display: block;
+background: #fff;
+color: #000;
+}
+
+.card__reveal1 {
+position: absolute;
+background-image: url("https://i.pinimg.com/1200x/bf/65/d5/bf65d51f34b1bf193ec947f3c0c3f3e0.jpg");
+background-size:cover;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease;
+}
+
+.card__reveal2 {
+position: absolute;
+background-image: url("https://i.pinimg.com/1200x/bf/65/d5/bf65d51f34b1bf193ec947f3c0c3f3e0.jpg");
+background-size:cover;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease;
+}
+
+.card__reveal3 {
+position: absolute;
+background-image: url("https://i.pinimg.com/1200x/bf/65/d5/bf65d51f34b1bf193ec947f3c0c3f3e0.jpg");
+background-size:cover;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease;
+}
+
+
+.card__reveal4 {
+position: absolute;
+background-image: url("https://i.pinimg.com/1200x/bf/65/d5/bf65d51f34b1bf193ec947f3c0c3f3e0.jpg");
+background-size:cover;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease;
+}
+
+.card__reveal5 {
+position: absolute;
+background-image: url("https://i.pinimg.com/1200x/bf/65/d5/bf65d51f34b1bf193ec947f3c0c3f3e0.jpg");
+background-size:cover;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease;
+}
+
+.card__reveal6 {
+position: absolute;
+background-image: url("https://i.pinimg.com/1200x/bf/65/d5/bf65d51f34b1bf193ec947f3c0c3f3e0.jpg");
+background-size:cover;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease;
+}
+
+.box {
+	background: linear-gradient(to right, #87361b, darkorange);
+	color: white;
+	--width: 120px;
+	--height: 50px;
+	width: var(--width);
+	height: var(--height);
+	text-align: center;
+	line-height: var(--height);
+	font-size: calc(var(--height) / 2.5);
+	
+	letter-spacing: 0.2em;
+	border: 1px solid darkgoldenrod;
+	border-radius: 2em;
+	transform: perspective(500px) rotateY(-15deg);
+	text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+	
+	overflow: hidden;
+}
+
+.box:hover {
+	transform: perspective(500px) rotateY(15deg);
+	text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.box::before {
+	content: '';
+	position: absolute;
+	
+	background: linear-gradient(to right, transparent, white, transparent);
+	
+	transition: 0.5s;
+}
+
+
+</style>
+
+</head>
+<body style="background-image:url(images/bg/team-bg1.png);">
+
+ 
+  <header class="main_header_area">
+
+    <div class="header_menu">
+    <nav class="navbar navbar-default">
+    <div class="container">
+    <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-2 pt-2">
+    
+    <div class="navbar-header">
+    <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="image" style="height: 250px;margin-top: -70px;margin-bottom: -70px; margin-left:-20%">
+    </a>
+    </div>
+    
+    <div class="navbar-collapse1 d-lg-flex align-items-center" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav" id="responsive-menu">
+    <li><a href="index.html"style = "font-family:'Inter', sans-serif; font-weight:bold;  " class = "navline">Home</a> </li>
+    <li><a href="about.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline" >About </a></li>
+    <li><a href="services.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline active">Services</a> </li>
+    <li><a href="menu.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline" >Menu</a></li>
+    <li><a href="gallery.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline">Gallery</a> </li>
+    
+    <li><a href="testimonials.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline">Testimonials </a></li>
+    <li><a href="contact.html" style = "font-family:'Inter', sans-serif; font-weight:bold; " class = "navline">Contact </a></li>
+    </ul>
+    
+    </div>
+    <div id="slicknav-mobile"></div>
+    </div>
+    </div>
+    </nav>
+    </div>
+    
+    </header>
+    
+
+  <div class=" breadcrumb-main" style="background-image: url(https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg);">
+
+    <!--Content before waves-->
+    <div class="inner-header flex">
+    <!--Just the logo.. Don't mind this-->
+    <div class="breadcrumb-outer pt-8">
+      <div class="container">
+      <div class="breadcrumb-content text-center">
+      <h2 class="mb-0 d-inline" style = "color:white">Services</h2>
+      <nav aria-label="breadcrumb" class="mt-2">
+      <ul class="breadcrumb">
+      <li class="breadcrumb-item "><a href="index.html" style = "color:white;" >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Services</li>
+      </ul>
+      
+      </nav>
+      </div>
+      </div>
+      </div>
+      <div class="overlay"></div>
+  
+    </div>
+    
+    <!--Waves Container-->
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+    <!--Waves end-->
+    
+    </div>
+
+
+<section style = "background-color:#FFFEFA;">
+  
+  <div class = "container">
+    <div class = "row">
+  
+      <div class = "col-12 col-md-6 col-lg-4">
+        <div class="card d-flex flex-column justify-content-center text-center" style = "height:300px;">
+          <div class="card__content p-4">
+            <p style = "color:black;  font-weight:bold; margin-bottom:20px;">We are specialized in providing food and beverages for weddings. It often involves creating a menu that aligns with the couple's preferences and theme of the wedding.</p>
+            <div class="box " style = "margin:auto; margin-bottom:20px;"><a href = "contact.html" style = "color:white; text-decoration:none;">Book</a></div>
+            
+          </div>
+         
+          <div class="card__reveal1 card__reveal--up d-flex flex-column justify-content-center">
+            <h3 style = "color:white;">Wedding Catering</h3>
+            
+          </div>
+        </div>
+        
+      </div>
+  
+      <div class = "col-12 col-md-6 col-lg-4">
+        <div class="card d-flex flex-column justify-content-center text-center" style = "height:300px;">
+          <div class="card__content p-4">
+            <p style = "color:black;  font-weight:bold; margin-bottom:20px;">We caters to business events, such as meetings, conferences, seminars, and office parties. It focuses on providing professional and well-presented meals for attendees.</p>
+            <div class="box " style = "margin:auto; margin-bottom:20px;"><a href = "contact.html" style = "color:white; text-decoration:none;">Book</a></div>
+          </div>
+          <div class="card__reveal2 card__reveal--left d-flex flex-column justify-content-center">
+            <h3 style = "color:white;">Corporate Catering</h3>
+          </div>
+        </div>
+        
+      </div>
+  
+      <div class = "col-12 col-md-6 col-lg-4">
+        <div class="card d-flex flex-column justify-content-center text-center" style = "height:300px;">
+          <div class="card__content p-4">
+            <p style = "color:black;  font-weight:bold; margin-bottom:20px;">We cover a range of gatherings, including birthday parties, anniversaries, family reunions, and other private celebrations. The menus can be designed to suit the theme and preferences of the hosts.</p>
+            <div class="box " style = "margin:auto; margin-bottom:20px;"><a href = "contact.html" style = "color:white; text-decoration:none;">Book</a></div>
+          </div>
+          <div class="card__reveal3 card__reveal--down d-flex flex-column justify-content-center">
+            <h3 style = "color:white;">Social Event Catering</h3>
+          </div>
+        </div>
+      </div>
+  
+      <div class = "col-12 col-md-6 col-lg-4">
+        <div class="card d-flex flex-column justify-content-center text-center" style = "height:300px;">
+          <div class="card__content p-4">
+            <p style = "color:black;  font-weight:bold; margin-bottom:20px;">We broader and encompasses a variety of events, including fundraisers, galas, product launches, and cultural celebrations. Event caterers often handle not only food and beverages but also event planning and coordination.</p>
+            <div class="box " style = "margin:auto; margin-bottom:20px;"><a href = "contact.html" style = "color:white; text-decoration:none;">Book</a></div>
+          </div>
+          <div class="card__reveal4 card__reveal--right d-flex flex-column justify-content-center">
+            <h3 style = "color:white;">Event Catering</h3>
+          </div>
+        </div>
+      </div>
+  
+      <div class = "col-12 col-md-6 col-lg-4">
+        <div class="card d-flex flex-column justify-content-center text-center" style = "height:300px;">
+          <div class="card__content p-4">
+            <p style = "color:black;  font-weight:bold; margin-bottom:20px;">We involves setting up a buffet-style meal where guests can choose from a variety of dishes. It's a flexible option that can accommodate different dietary preferences.</p>
+            <div class="box " style = "margin:auto; margin-bottom:20px;"><a href = "contact.html" style = "color:white; text-decoration:none;">Book</a></div>
+          </div>
+          <div class="card__reveal5 card__reveal--up d-flex flex-column justify-content-center">
+            <h3 style = "color:white;">Buffet Catering</h3>
+          </div>
+        </div>
+        
+      </div>
+  
+      <div class = "col-12 col-md-6 col-lg-4">
+        <div class="card d-flex flex-column justify-content-center text-center" style = "height:300px;">
+          <div class="card__content p-4">
+            <p style = "color:black;  font-weight:bold; margin-bottom:20px;">We covers every aspect of an event, including food preparation, presentation, serving, and cleanup. This type of catering is suitable for larger events where a dedicated team manages all catering-related tasks.</p>
+            <div class="box " style = "margin:auto; margin-bottom:20px;"><a href = "contact.html" style = "color:white; text-decoration:none;">Book</a></div>
+          </div>
+          <div class="card__reveal6 card__reveal--down d-flex flex-column justify-content-center">
+            <h3 style = "color:white;">Full-Service Catering</h3>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer style="background-image:url(images/bg/team-bg.png);" class="pt-10 bubbles">
+  <div class="footer-upper pb-4">
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
+  
+  <img src="images/logo.png" alt="" style = "width:50%; margin-left:-25px; margin-top:-40px;">
+  <p class = "mb-4">At Parvathi Caterings, we believe that every event is an opportunity to create unforgettable memories through exquisite cuisine. </p>
+  <h4 class="white">Opening Hours</h4>
+  <ul class = "mb-4">
+    <li class="d-flex align-items-center justify-content-between"><div class="day">MONDAY-SUNDAY<br/>(9:00 AM - 10:00 PM ) </li>
+   
+    </ul>
+  
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+  <div class="footer-links">
+  <h4 class="white">Quick Links</h4>
+  <ul>
+  
+  <li><a href="about.html">About </li>
+    <li><a href="servicess.html">Services</li>
+      <li><a href="gallery.html">Gallery</a></li> 
+  <li><a href="menu.html">Menu</a></li>
+  
+  
+  <li><a href="testimonials.html">testimonials </li>
+  <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+  <div class="footer-links">
+  <h4 class="white">Contact</h4>
+  <p class="m-0" style=" font-size: 17px;">146, Siruvani Main Road, <br/>Perur - Coimbatore, TamilNadu 641010.</p>
+  <p class="mt-4" style=" font-size: 16px;">(91)- 98940 60566</p>
+  <p class="m-0" style=" font-size: 16px;">(91)- 94437 60566</p>
+  <p class="mt-4" ><a href="info@parvathicaterings.com" class="__cf_email__" data-cfemail="5038353c2010142522323122393e3e7e333f3d" style="font-size: 16px;">info@parvathicaterings.com</a></p>
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+  <div class="footer-links">
+  <h4 class="white">Newsletter</h4>
+  <p>Ready to turn your event into a gastronomic journey? Get in touch with us today to discuss your culinary aspirations. Whether it's an intimate gathering or a grand affair, Parvathi Caterings is here to transform your vision into reality.</p>
+  <div class="newsletter-form">
+  <form>
+  <input type="email" placeholder="Enter your email">
+  <input type="submit" class="nir-btn mt-2 w-100" value="Send">
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="footer-copyright">
+  <div class="container">
+  <div class="copyright-inner d-md-flex align-items-center justify-content-between">
+  <div class="copyright-text">
+  <p class="m-0 white">2023 @ Parvathy Caterings. Designed By <a href = "https://olivegrapes.in/" target = "__blank">Olivegrapes.</a></p>
+  </div>
+  <div class="social-links">
+  <ul>
+  <li><a href="https://www.facebook.com/parvathicaterings?mibextid=ZbWKwL"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+  <li><a href="whatsapp://send?phone=[9894060566]" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+  <li><a href="https://www.instagram.com/parvathicaterings/?igshid=ZDdkNTZiNTM%3D"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+  <li><a href="tel:91+ 98940 60566/91+ 94437 60566"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="overlay"></div>
+  <div class="mid-overlay"></div>
+  </footer>
+
+<div id="back-to-top">
+<a href="#"></a>
+</div>
+
+
+<div id="search1">
+<button type="button" class="close">×</button>
+<form>
+<input type="search" value="" placeholder="type keyword(s) here" />
+<button type="submit" class="btn btn-primary">Search</button>
+</form>
+</div>
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/particlerun.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom-swiper.js"></script>
+<script src="js/custom-nav.js"></script>
+<script src="js/custom-date.js"></script>
+<script>(function(){var js = "window['__CF$cv$params']={r:'72c906cd4a3285ae',m:'eiacfPv1VTbubb6IBoTiqlzIuMbCbDz4cA04aeevOs8-1658124336-0-AZPgEA7NbjIOMtqtSERWuEyUIRyE/DPm/2BJBitT739M/vq2pX20QjEIAH1q3horQox3ennmlT3R5tiGWJ3dm9lW36aXNBGNyJnD4KhhJhvFEj7GKZ3jKcm/rnWoxeIrc2TN6rvlfKqsDIiBtPYC4kE=',s:[0x094ff0f135,0x8bcfa83ab4],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible5615.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+<!-- Mirrored from htmldesigntemplates.com/html/durbarinn/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jul 2022 06:06:57 GMT -->
+</html>
